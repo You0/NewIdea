@@ -1,0 +1,57 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="dp5">5dp</dimen>
+    <dimen name="dp3">3dp</dimen>
+    <dimen name="dp1">1dp</dimen>
+    <dimen name="dp10">10dp</dimen>
+    <dimen name="dp20">20dp</dimen>
+    <dimen name="dp25">25dp</dimen>
+    <dimen name="dp30">30dp</dimen>
+    <dimen name="dp50">50dp</dimen>
+    <dimen name="dp80">80dp</dimen>
+    <dimen name="dp100">100dp</dimen>
+    <dimen name="dp6">6dp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="font_24sp">24sp</dimen>
+    <dimen name="font_14sp">14sp</dimen>
+    <dimen name="font_17sp">17sp</dimen>
+    <dimen name="dp2">2dp</dimen>
+
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="itmes_height">200dp</dimen>
+    <dimen name="para_head">200dp</dimen>
+
+
+    <!-- MEDIA CONTROLLER -->
+    <dimen name="media_controller_text_size">14sp</dimen>
+    <dimen name="media_controller_seekbar_width">32dip</dimen>
+    <dimen name="media_controller_seekbar_height">32dip</dimen>
+    <dimen name="media_controller_top_margin">80dip</dimen>
+    <dimen name="media_controller_bottom_margin">12dip</dimen>
+    <dimen name="media_controller_view_height">48dip</dimen>
+    <dimen name="media_controller_button_height">52dip</dimen>
+    <dimen name="media_controller_button_width">71dip</dimen>
+
+
+    <!-- search view!-->
+    <dimen name="search_divider">1dp</dimen>
+    <dimen name="search_height">48dp</dimen>
+    <dimen name="searchView_margin_horizontal">8dp</dimen>
+    <dimen name="searchView_margin_vertical">2dp</dimen>
+    <dimen name="searchView_image_margin">16dp</dimen>
+    <dimen name="searchView_text_size">20sp</dimen>
+    <dimen name="search_reveal">24dp</dimen>
+    <dimen name="suggestion_item_keywords">16sp</dimen>
+    <dimen name="suggestion_item_drawable_padding">4dp</dimen>
+    <dimen name="popup_paddingTop">8dp</dimen>
+    <dimen name="suggestion_item_margin">16dp</dimen>
+    <dimen name="searchview_margin">36dp</dimen>
+    <dimen name="searchview_item_margin">36dp</dimen>
+    <dimen name="searchView_item_height">56dp</dimen>
+
+</resources>

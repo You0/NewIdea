@@ -1,0 +1,116 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:Android="http://schemas.android.com/apk/res-auto"
+    package="com">
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-feature android:name = "android.hardware.camera" />
+    <uses-feature android:name = "android.hardware.camera.autofocus" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+
+
+
+    <application
+        android:hardwareAccelerated="true"
+        android:name=".duanqu.Idea.app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/behance"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:largeHeap="true">
+        <activity android:name=".duanqu.Idea.activity.SplashActivity"
+
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".duanqu.Idea.activity.ImageWatchActivity"></activity>
+
+        <activity android:name=".duanqu.Idea.activity.FeedActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            ></activity>
+
+        <activity android:name=".duanqu.Idea.activity.MoreMusicActivity" />
+
+        <activity android:name=".duanqu.Idea.activity.ParallaxOtherUserInfoDisplayActivity"></activity>
+
+        <activity android:name=".duanqu.Idea.activity.ImageDisplay"
+            android:theme="@style/MyImageDisplayTheme"
+            />
+
+        <activity android:name=".duanqu.Idea.activity.VideoPlayViewActivity"
+            android:theme="@style/MyDarkTheme"
+            ></activity>
+
+        <activity android:name=".duanqu.Idea.activity.AttentionActivity"
+            android:theme="@style/TranslucentTheme"></activity>
+
+        <activity android:name=".duanqu.Idea.activity.SendActivity"></activity>
+        <activity android:name=".duanqu.Idea.activity.ParallaxUserInfoDisplayActivity"
+            android:windowSoftInputMode="adjustResize"
+            ></activity>
+
+        <activity android:name=".duanqu.Idea.activity.MainActivity1"></activity>
+
+        <activity android:name=".duanqu.Idea.activity.RegisterActivity"></activity>
+
+        <activity android:name=".duanqu.Idea.activity.LoginActivity"></activity>
+
+        <activity android:name=".duanqu.Idea.activity.FirstStepPoupWindowForRegister"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            ></activity>
+
+        <activity android:name=".duanqu.Idea.activity.ChatActivity"></activity>
+
+        <service android:name=".duanqu.Idea.service.PnService"></service>
+
+        <activity android:name=".duanqu.Idea.activity.SearchActivity"></activity>
+
+        <activity android:name=".duanqu.Idea.activity.HistoryAndCacheCommentActitity"></activity>
+
+        <activity android:name=".duanqu.Idea.activity.UserFeedsDisplayAty"></activity>
+
+        <activity android:name=".duanqu.Idea.activity.MyAnswerAty"></activity>
+
+        <activity android:name=".duanqu.Idea.activity.MoreVideoDisplayActivity"></activity>
+
+        <activity android:name=".duanqu.Idea.activity.AboutActivity"></activity>
+
+        <activity android:name=".duanqu.Idea.activity.SettingsActivity"></activity>
+
+        <activity android:name="com.example.zhaoshuang.weixinrecordeddemo.EditVideoActivity"
+            android:windowSoftInputMode="adjustResize|adjustPan" />
+        <activity android:name="com.example.zhaoshuang.weixinrecordeddemo.VideoPlayActivity" />
+        <activity android:name="com.example.zhaoshuang.weixinrecordeddemo.CutVideoActivity" />
+        <activity android:name="com.example.zhaoshuang.weixinrecordeddemo.MainActivity"></activity>
+    </application>
+
+</manifest>

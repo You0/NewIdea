@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="item_count" format="integer"></attr>
+
+    <declare-styleable name="ViewPagerIndicator">
+        <attr name="item_count" />
+    </declare-styleable>
+
+    <declare-styleable name="ChatImageView">
+        <attr name="ninePNG" format="reference"/>
+        <attr name="arrow_width" format="dimension"/>
+        <attr name="arrow_height" format="dimension"/>
+        <attr name="arrow_top" format="dimension"/>
+        <attr name="offset" format="dimension"/>
+        <attr name="radius" format="dimension"/>
+        <attr name="direction" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+        </attr>
+    </declare-styleable>
+
+
+    <!--search view!-->
+    <declare-styleable name="MaterialSearchView">
+        <attr name="search_hint" format="string"/>
+        <attr name="search_hint_color" format="color"/>
+        <attr name="search_animation_duration" format="integer"/>
+        <attr name="search_text_size" format="dimension"/>
+        <attr name="search_text_color" format="color"/>
+        <attr name="search_text_style" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="bold" value="1" />
+            <enum name="italic" value="2" />
+            <enum name="bold_italic" value="3" />
+        </attr>
+        <attr name="search_background_color" format="color" />
+    </declare-styleable>
+
+
+</resources>

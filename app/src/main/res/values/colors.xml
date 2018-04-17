@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="gray">#ddd</color>
+    <color name="blue">#3394EC</color>
+
+    <color name="color1">#fff</color>
+    <color name="color2">#f00</color>
+    <color name="color3">#FECD52</color>
+    <color name="color4">#145CB9</color>
+    <color name="color5">#21AE58</color>
+    <color name="video_gray">#aadddddd</color>
+
+
+
+    <color name="colorHuise">#55000000</color>
+    <color name="huise">#00bebebe</color>
+    <color name="trans">#00000000</color>
+    <color name="black">#000</color>
+    <color name="black90">#90000000</color>
+    <color name="titlecolor">#0096ff</color>
+    <color name="white">#ffffff</color>
+    <color name="black05">#05000000</color>
+    <color name="one">#ffe9c4</color>
+    <color name="name">#ff9a76</color>
+
+    <color name="tianlan">#2dd7ff</color>
+    <color name="biz_audio_progress_bg">#00b2ff</color>
+    <color name="biz_audio_progress_first">#ffffff</color>
+    <color name="biz_audio_progress_second">#6b6666</color>
+    <color name="huibai">#50ffffff</color>
+
+    <color name="default_bg">#aa000000</color>
+    <color name="select_color">#00b2ff</color>
+    <color name="normal_color">#ffffffff</color>
+    <color name="divider_color">#55504a</color>
+    <!--special color-->
+    <color name="black_a10_color">#1a000000</color>
+
+    <color name="translucent_background">#95000000</color>
+
+
+    <!-- search view!-->
+    <color name="searchView_text">#212121</color>
+    <color name="searchView_text_hint">#727272</color>
+    <color name="searchView_bg">#FFFFFF</color>
+
+    <color name="search_shadow_layout">#50000000</color>
+
+
+    <color name="gray_de">#666666</color>
+    <color name="list_item_press">#216b74ff</color>
+
+    <color name="theme_primary">#4387F0</color>
+    <color name="theme_primary_dark">#ff2b4d90</color>
+
+</resources>

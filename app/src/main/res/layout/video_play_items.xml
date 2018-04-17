@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+<LinearLayout
+    android:id="@+id/play_linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/cover_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+
+
+        <com.duanqu.Idea.CustomView.VideoPlayView
+            android:id="@+id/video_play_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"></com.duanqu.Idea.CustomView.VideoPlayView>
+
+
+        <ImageView
+            android:id="@+id/play_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/biz_video_list_play_icon_big"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </FrameLayout>
+
+</LinearLayout>
+
+
+
+    <TextView
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:textColor="#ffffff"
+        android:text="测试"
+
+        />
+
+
+    <LinearLayout
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_marginLeft="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/head"
+            />
+
+        <TextView
+            android:id="@+id/userid"
+            android:paddingLeft="10dp"
+            android:textColor="#cccccc"
+            android:layout_gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="五颜六色"
+            />
+
+        <TextView
+            android:id="@+id/comments"
+            android:textColor="#cccccc"
+            android:layout_gravity="center_vertical"
+            android:paddingRight="10dp"
+            android:gravity="right"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="评论:12"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

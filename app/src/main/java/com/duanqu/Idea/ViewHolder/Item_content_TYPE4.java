@@ -1,0 +1,138 @@
+package com.duanqu.Idea.ViewHolder;
+
+
+import android.content.Intent;
+import android.net.Uri;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.R;
+import com.duanqu.Idea.activity.VideoPlayViewActivity;
+import com.duanqu.Idea.bean.MainMessageBean;
+import com.facebook.drawee.view.SimpleDraweeView;
+
+/**
+ * Created by Administrator on 2016/7/4.
+ */
+public class Item_content_TYPE4 extends MainMessageBaseViewHolder {
+    private ImageView mPlayBtnView;
+    private Uri uri;
+    private SimpleDraweeView frame;
+    private MainMessageBean data;
+    private TextView textView;
+
+    @Override
+    protected void bindData(MainMessageBean data) {
+        String video = data.getVideoUri();
+        uri = Uri.parse(video);
+        this.data = data;
+        frame.setImageURI(Uri.parse((String) data.getImages().get(0)));
+        textView.setText(data.getTextContent());
+
+//        try {
+//            if (Build.VERSION.SDK_INT >= 14) {
+//                retriever.setDataSource(video, new HashMap<String, String>());
+//            } else {
+//                retriever.setDataSource(video);
+//            }
+//            frame.setImageBitmap(retriever.getFrameAtTime(1));
+//        } catch (RuntimeException ex) {
+//        } finally {
+//            try {
+//                retriever.release();
+//            } catch (RuntimeException ex) {
+//            }
+//        }
+
+    }
+
+    @Override
+    protected int getViewLayout() {
+        return R.layout.item_content_type4;
+    }
+
+    @Override
+    protected void FindView(View parent) {
+        textView = (TextView) parent.findViewById(R.id.content);
+        mPlayBtnView = (ImageView) parent.findViewById(R.id.play_btn);
+        mPlayBtnView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivityContext(), VideoPlayViewActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("data", data);
+                intent.putExtra("data",bundle);
+
+                getActivityContext().startActivity(intent);
+            }
+        });
+        frame = (SimpleDraweeView) parent.findViewById(R.id.frame);
+    }
+
+//    @Override
+//    public void onClick(View view) {
+//        switch (view.getId()) {
+//
+//            case R.id.play_btn: {
+//
+//
+//                break;
+//            }
+//
+//
+//        }
+//
+//
+//    }
+
+    /**
+     * 播放器的回调函数
+     */
+//    private SuperVideoPlayer.VideoPlayCallbackImpl mVideoPlayCallback = new SuperVideoPlayer.VideoPlayCallbackImpl() {
+//        /**
+//         * 播放器关闭按钮回调
+//         */
+//        @Override
+//        public void onCloseVideo() {
+//            mSuperVideoPlayer.close();//关闭VideoView
+//            mPlayBtnView.setVisibility(View.VISIBLE);
+//            resetPageToPortrait();
+//        }
+//
+//        /**
+//         * 播放器横竖屏切换回调
+//         */
+//        @Override
+//        public void onSwitchPageType() {
+////            if (MainActivity1.mActivity.getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
+////                MainActivity1.mActivity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+////                mSuperVideoPlayer.setPageType(MediaController.PageType.SHRINK);
+////            } else {
+////                MainActivity1.mActivity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+////                mSuperVideoPlayer.setPageType(MediaController.PageType.EXPAND);
+////            }
+//        }
+//
+//        /**
+//         * 播放完成回调
+//         */
+//        @Override
+//        public void onPlayFinish() {
+//
+//        }
+//    };
+//
+//    /***
+//     * 恢复屏幕至竖屏
+//     */
+//    private void resetPageToPortrait() {
+////        if (MainActivity1.mActivity.getRequestedOrientation() == ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE) {
+////            MainActivity1.mActivity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+////            mSuperVideoPlayer.setPageType(MediaController.PageType.SHRINK);
+////        }
+//    }
+
+}
