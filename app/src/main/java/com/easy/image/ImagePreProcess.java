@@ -23,7 +23,7 @@ public class ImagePreProcess {
 	private static Map<Bitmap, String> trainMap = null;
     private static Context context = null;
 	private static int index = 0;
-	public static String srcPath = "data/data/krelve.app.kuaihu/";
+	public static String srcPath = "data/data/com.example.zhaoshuang.weixinrecordeddemo/";
 	public static String trainPath = null;
 	//public static String tempPath = "temp\\";
 

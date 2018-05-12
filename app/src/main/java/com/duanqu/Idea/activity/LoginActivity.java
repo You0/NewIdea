@@ -21,6 +21,7 @@ import com.duanqu.Idea.bean.ParallaxOtherUserBean;
 import com.duanqu.Idea.test.Datas;
 import com.google.gson.Gson;
 import com.rengwuxian.materialedittext.MaterialEditText;
+import com.uiadapter.NewMainActivity;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.Callback;
 
@@ -123,7 +124,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                 .commit();
                         MyApplication.LoadPreferences();
                         mProgressDialog.dismiss();
-                        Intent intent = new Intent(LoginActivity.this, MainActivity1.class);
+
+                        //TODO
+                        Intent intent = new Intent(LoginActivity.this, NewMainActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent);
                     }

@@ -11,6 +11,8 @@ import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -375,10 +377,14 @@ public class ClassTableFragment extends BaseFragment {
             Button button = (Button) view2.findViewById(R.id.yes);
             dialog = new Dialog(mActivity);
             LinearLayout.LayoutParams p = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.MATCH_PARENT);
+
+            view2.setLayoutParams(p);
             dialog.addContentView(view2, p);
-            dialog.setTitle("绑定学号:");
+            Window dialogWindow = dialog.getWindow();
+            WindowManager.LayoutParams lp = dialogWindow.getAttributes();
+            lp.width=MyApplication.dip2px(300);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -394,7 +400,7 @@ public class ClassTableFragment extends BaseFragment {
                         @Override
                         public void run() {
                             jwUtils = JwUtils.jwUtils;
-                            jwUtils.Init("2", username, password);
+                            jwUtils.Init("1", username, password);
                             boolean istrue = jwUtils.OrcImage_Login();
                             System.out.println(istrue);
                             if (istrue == false) {

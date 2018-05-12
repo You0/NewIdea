@@ -903,7 +903,7 @@ public class JwUtils {
         Cookies = imagePreProcess.Cookies;
         try {
             HttpConnectionUtils httpConnectionUtils = new HttpConnectionUtils(BaseUrl+"default2.aspx");
-            String code = imagePreProcess.getAllOcr("data/data/krelve.app.kuaihu/0.png");
+            String code = imagePreProcess.getAllOcr("data/data/com.example.zhaoshuang.weixinrecordeddemo/0.png");
             ArrayList<String> arrayList = new ArrayList<String>();
             httpURLConnection = httpConnectionUtils.GetConnection("GET", "", "");
             result = Read(httpURLConnection);

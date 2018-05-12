@@ -13,6 +13,7 @@
     <color name="color4">#145CB9</color>
     <color name="color5">#21AE58</color>
     <color name="video_gray">#aadddddd</color>
+    <color name="xianyu">#FAD242</color>
 
 
 
@@ -77,4 +78,9 @@
     <color name="light_menu_listview_textcolor">#FF000000</color>
     <color name="dark_menu_listview_textcolor">@android:color/darker_gray</color>
     <color name="clicked_tv_textcolor">@android:color/darker_gray</color>
+
+
+
+
+    <color name="navigate_tabbar_text_normal">#ff333333</color>
 </resources>

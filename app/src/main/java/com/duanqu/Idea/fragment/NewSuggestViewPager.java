@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,6 +21,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
 import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
@@ -35,11 +37,14 @@ import com.duanqu.Idea.JsonParse.BaiSi;
 import com.duanqu.Idea.JsonParse.MainMessageParse;
 import com.duanqu.Idea.activity.MainActivity1;
 import com.duanqu.Idea.activity.VideoPlayViewActivity;
+import com.duanqu.Idea.app.MyApplication;
 import com.duanqu.Idea.bean.BaiSiBean;
 import com.duanqu.Idea.bean.MainMessageBean;
 import com.duanqu.Idea.bean.VideoInfo;
 import com.duanqu.Idea.test.Datas;
+import com.duanqu.Idea.utils.MyGestureDetector;
 import com.facebook.drawee.view.SimpleDraweeView;
+import com.uiadapter.NewMainActivity;
 import com.yixia.camera.util.Log;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.Callback;
@@ -49,6 +54,7 @@ import java.util.List;
 
 import okhttp3.Call;
 import okhttp3.Response;
+
 
 /**
  * Created by Me on 2017/4/7.
@@ -71,6 +77,7 @@ public class NewSuggestViewPager extends BaseFragment implements VideoPlayView.M
     private String url;
     private String maxtime;
     private Boolean new_v;
+    private boolean Visibility = true;
 
     private boolean isAnimtion = false;
 
@@ -96,7 +103,6 @@ public class NewSuggestViewPager extends BaseFragment implements VideoPlayView.M
     private void initView() {
 
 
-
         videoList = (ListView) view.findViewById(R.id.video_watch_list);
 
     }
@@ -105,6 +111,38 @@ public class NewSuggestViewPager extends BaseFragment implements VideoPlayView.M
         adapter = new MyAdapter(context);
         videoList.setAdapter(adapter);
         videoList.setOnScrollListener(this);
+
+
+        videoList.setOnTouchListener(new MyGestureDetector(getActivity()) {
+            @Override
+            public void onScrollDown() {
+                if (Visibility == false) {
+                    Animation DisplayAnimation = new TranslateAnimation(0, 0, MyApplication.dip2px(80), 0);
+                    DisplayAnimation.setDuration(300);
+                    DisplayAnimation.setFillAfter(true);
+
+                    NewMainActivity.bottomBar.startAnimation(DisplayAnimation);
+                    NewMainActivity.bottomBar.setVisibility(View.VISIBLE);
+                    Visibility = true;
+                }
+            }
+
+            @Override
+            public void onScrollUp() {
+                if (Visibility == true) {
+                    Animation MissAnimation = new TranslateAnimation(0, 0, 0, MyApplication.dip2px(80));
+                    MissAnimation.setDuration(300);
+                    MissAnimation.setFillAfter(true);
+                    NewMainActivity.bottomBar.startAnimation(MissAnimation);
+                    NewMainActivity.bottomBar.setVisibility(View.GONE);
+                    Visibility = false;
+                }
+            }
+        });
+
+
+
+
         path = new LinkedList<VideoInfo>();
 
         if(Messageinfo!=null){
@@ -137,6 +175,9 @@ public class NewSuggestViewPager extends BaseFragment implements VideoPlayView.M
     public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
         Log.i("EE", "当前" + currentPosition);
         Log.i("EE", "可见的第一个" + videoList.getFirstVisiblePosition());
+
+        //mNavigateTabBar.setVisibility(View.GONE);
+
 
         if(videoList.getChildAt(0)==null){
             return;
@@ -397,11 +438,11 @@ public class NewSuggestViewPager extends BaseFragment implements VideoPlayView.M
 
             if (videoPaths.get(position).getScale() == 2) {
                 LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                        (int) Config.WIDTH/16*9);
+                        (int) Config.WIDTH/5*4);
                 viewHolder.play_linearlayout.setLayoutParams(params);
             } else {
                 LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                        (int)Config.WIDTH);
+                        (int)Config.HEIGHT/5*4);
                 viewHolder.play_linearlayout.setLayoutParams(params);
             }
 

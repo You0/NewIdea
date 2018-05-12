@@ -17,6 +17,7 @@ import com.R;
 import com.duanqu.Idea.app.MyApplication;
 import com.duanqu.Idea.test.Datas;
 import com.rengwuxian.materialedittext.MaterialEditText;
+import com.uiadapter.NewMainActivity;
 import com.zhy.http.okhttp.OkHttpUtils;
 import com.zhy.http.okhttp.callback.Callback;
 
@@ -142,7 +143,8 @@ public class RegisterPoupWindow extends PopupWindow implements View.OnClickListe
 
         mProgressDialog.cancel();
         RegisterPoupWindow.this.dismiss();
-        Intent intent = new Intent(context, MainActivity1.class);
+        //TODO
+        Intent intent = new Intent(context, NewMainActivity.class);
         intent.putExtra("tj",true);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);

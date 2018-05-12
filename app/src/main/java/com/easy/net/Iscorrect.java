@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Handler;
 import android.os.Message;
 import android.text.InputType;
@@ -11,6 +12,7 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.R;
 import com.duanqu.Idea.app.MyApplication;
 import com.easy.Ecrypt.Encrypt;
 
@@ -128,14 +130,16 @@ public class Iscorrect {
         final LinearLayout ll = new LinearLayout(context);
         ll.setOrientation(LinearLayout.VERTICAL);
         final EditText inputUsername = new EditText(MyApplication.getContext());
-        inputUsername.setTextColor(0xFF000000);
+        inputUsername.setTextColor(Color.BLACK);
         inputUsername.setHint("请输入学号");
         inputUsername.setPadding(50, 50, 50, 50);
+        inputUsername.setHintTextColor(context.getResources().getColor(R.color.black90));
         final EditText inputPassword = new EditText(MyApplication.getContext());
-        inputPassword.setTextColor(0xFF000000);
+        inputPassword.setTextColor(Color.BLACK);
         inputPassword.setPadding(50, 50, 50, 50);
         inputPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
         inputPassword.setHint("请输入查询密码(身份证后6位)");
+        inputPassword.setHintTextColor(context.getResources().getColor(R.color.black90));
         //inputUsername.setFocusable(true);
         ll.addView(inputUsername);
         ll.addView(inputPassword);

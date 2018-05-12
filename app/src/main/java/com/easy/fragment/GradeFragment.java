@@ -15,6 +15,8 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AbsListView;
 import android.widget.Button;
 import android.widget.EditText;
@@ -25,6 +27,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.R;
+import com.duanqu.Idea.app.MyApplication;
 import com.easy.bean.GradeCourse;
 import com.easy.db.GradeDB;
 import com.easy.jwxt.JwUtils;
@@ -172,10 +175,14 @@ public class GradeFragment extends BaseFragment {
             Button button = (Button) view2.findViewById(R.id.yes);
             dialog = new Dialog(mActivity);
             LinearLayout.LayoutParams p = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.MATCH_PARENT);
+
+            view2.setLayoutParams(p);
             dialog.addContentView(view2, p);
-            dialog.setTitle("绑定学号:");
+            Window dialogWindow = dialog.getWindow();
+            WindowManager.LayoutParams lp = dialogWindow.getAttributes();
+            lp.width=MyApplication.dip2px(300);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -195,7 +202,7 @@ public class GradeFragment extends BaseFragment {
                         @Override
                         public void run() {
 
-                            jwUtils.Init("2", username, password);
+                            jwUtils.Init("1", username, password);
                             boolean istrue = jwUtils.OrcImage_Login();
                             System.out.println(istrue);
                             if (istrue == false) {

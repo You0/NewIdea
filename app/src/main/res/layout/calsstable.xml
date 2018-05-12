@@ -11,7 +11,8 @@
     <TextView
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:background="#7FFFD4"/>
+        android:background="#5dc6c6c6"
+        />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -31,7 +32,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#7FFFD4"
+            android:background="#5dc6c6c6"
             android:text="2"/>
         <TextView
             android:layout_width="match_parent"
@@ -44,7 +45,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#7FFFD4"
+            android:background="#5dc6c6c6"
             android:text="4"/>
         <TextView
             android:layout_width="match_parent"
@@ -57,7 +58,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#7FFFD4"
+            android:background="#5dc6c6c6"
             android:text="6"/>
         <TextView
             android:layout_width="match_parent"
@@ -70,7 +71,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#7FFFD4"
+            android:background="#5dc6c6c6"
             android:text="8"/>
         <TextView
             android:layout_width="match_parent"
@@ -83,7 +84,7 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:gravity="center"
-            android:background="#7FFFD4"
+            android:background="#5dc6c6c6"
             android:text="10"/>
         <TextView
             android:layout_width="match_parent"
@@ -108,55 +109,57 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="30dp"
-            android:text="星期一"
+            android:text="周一"
             android:gravity="center"/>
 
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="30dp"
-            android:text="星期二"
-            android:background="#7FFFD4"
+            android:text="周二"
+            android:background="#5dc6c6c6"
             android:gravity="center"/>
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="30dp"
-            android:text="星期三"
+            android:text="周三"
             android:gravity="center"/>
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="30dp"
-            android:text="星期四"
+            android:text="周四"
             android:gravity="center"
-            android:background="#7FFFD4"/>
+            android:background="#5dc6c6c6"
+            />
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:gravity="center"
             android:layout_height="30dp"
-            android:text="星期五"/>
+            android:text="周五"/>
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:gravity="center"
             android:layout_height="30dp"
-            android:text="星期六"
-            android:background="#7FFFD4"/>
+            android:text="周六"
+            android:background="#5dc6c6c6"
+            />
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
             android:gravity="center"
             android:layout_height="30dp"
-            android:text="星期天"/>
+            android:text="周日"/>
     </LinearLayout>
 <RelativeLayout
     android:id="@+id/relativeLayout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
 
-    <krelve.app.Easy.mycustom.PickerView
+    <com.easy.mycustom.PickerView
         android:layout_width="70dp"
         android:id="@+id/selector"
         android:layout_height="70dp"

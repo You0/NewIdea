@@ -4,6 +4,7 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:padding="5dp"
         android:id="@+id/course"
         android:text="出错！"
         android:layout_width="match_parent"

@@ -5,11 +5,12 @@
     android:orientation="vertical">
 
     <TextView
+        android:paddingTop="25dp"
         android:layout_width="match_parent"
         android:textSize="30dp"
         android:textColor="#fff"
         android:text="平均绩点"
-        android:background="@color/light_menu_header"
+        android:background="@color/titlecolor"
         android:layout_height="wrap_content"
         android:gravity="center"/>
 
@@ -18,7 +19,7 @@
         android:layout_width="match_parent"
         android:textSize="50dp"
         android:textColor="#fff"
-        android:background="@color/light_menu_header"
+        android:background="@color/titlecolor"
         android:layout_height="97dp"
         android:gravity="center"/>
 

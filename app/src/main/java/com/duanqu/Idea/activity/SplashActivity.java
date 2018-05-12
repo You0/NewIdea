@@ -13,6 +13,7 @@ import android.widget.ImageView;
 
 import com.R;
 import com.duanqu.Idea.app.MyApplication;
+import com.uiadapter.NewMainActivity;
 
 import java.io.File;
 
@@ -78,7 +79,9 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     private void startActivity() {
-        Intent intent = new Intent(SplashActivity.this, MainActivity1.class);
+        //替换
+        //Intent intent = new Intent(SplashActivity.this, MainActivity1.class);
+        Intent intent = new Intent(SplashActivity.this, NewMainActivity.class);
         startActivity(intent);
         overridePendingTransition(android.R.anim.fade_in,
                 android.R.anim.fade_out);

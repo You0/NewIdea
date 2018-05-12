@@ -12,6 +12,14 @@
     </style>
 
 
+    <declare-styleable name="NavigateTabBar">
+        <attr format="color|reference" name="navigateTabTextColor"/>
+        <attr format="color|reference" name="navigateTabSelectedTextColor"/>
+        <attr format="integer|reference" name="containerId"/>
+        <attr format="dimension|reference" name="navigateTabTextSize"/>
+    </declare-styleable>
+
+
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
